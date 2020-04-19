@@ -19,7 +19,7 @@ function LanguageToggle() {
 
   //getting the current language displayName based on it's ID
   const currentLang =
-    languages.filter((l) => l.id === lang)[0].displayName || 'fr-fr';
+    languages.find((l) => l.id === lang).displayName || 'fr-fr';
 
   const handleChange = (langID) => {
     dispatch({
